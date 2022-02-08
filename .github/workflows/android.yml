@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - run: cd mlkit/android/vision-quickstart/
+    - run: cd android/vision-quickstart/
     - uses: actions/checkout@v2
     - name: set up JDK 11
       uses: actions/setup-java@v2
