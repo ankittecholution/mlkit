@@ -12,7 +12,6 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - run: cd android/vision-quickstart/
     - uses: actions/checkout@v2
     - name: set up JDK 11
       uses: actions/setup-java@v2
@@ -20,7 +19,10 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
         cache: gradle
-
+        
+    - name: testing
+      run: cd android/vision-quickstart/
+    
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: Build with Gradle
